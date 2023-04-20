@@ -7,17 +7,6 @@ import (
 	"os"
 )
 
-func eat(runes []rune) (rune, []rune) {
-	switch {
-	case len(runes) > 2:
-		return runes[0], runes[1:]
-	case len(runes) == 1:
-		return runes[0], nil
-	default:
-		panic("syntax error")
-	}
-}
-
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	resScan := scanner.Scan()
